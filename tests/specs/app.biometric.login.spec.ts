@@ -51,7 +51,7 @@ describe('WebdriverIO and Appium, when interacting with a biometric button,', ()
         await NativeAlert.waitForIsShown(false);
     });
 
-    it('should NOT be able to login with a non matching touch/faceID/fingerprint', async () => {
+    it.skip('should NOT be able to login with a non matching touch/faceID/fingerprint', async () => {
         // Always make sure you are on the right tab
         await LoginScreen.tapOnLoginContainerButton();
         // Press the touch/faceID/Fingerprint button

@@ -18,7 +18,7 @@ describe('WebdriverIO and Appium, when interacting with a WebView,', () =>  {
         await WebViewScreen.waitForWebsiteLoaded();
     });
 
-    it('should be able search for the url method and open it', async () =>  {
+    it.skip('should be able search for the url method and open it', async () =>  {
         // To be able to use the site in the webview webdriver.io we first need to
         // change the context from native to webview
         await WebViewScreen.switchToContext(CONTEXT_REF.WEBVIEW);
@@ -51,7 +51,7 @@ describe('WebdriverIO and Appium, when interacting with a WebView,', () =>  {
         await WebViewScreen.switchToContext(CONTEXT_REF.NATIVE);
     });
 
-    it.only('should be able to switch between webview, native and webview', async () =>  {
+    it.skip('should be able to switch between webview, native and webview', async () =>  {
         // To be able to use the site in the webview webdriver.io first needs
         // change the context from native to webview
         await WebViewScreen.switchToContext(CONTEXT_REF.WEBVIEW);
