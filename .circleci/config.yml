@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.1.0
-  macos: circleci/macos@2.3.4
+  macos: circleci/macos@2.3.6
 
 jobs:
   ios_test:
@@ -15,6 +15,13 @@ jobs:
           device: iPhone 14
           version: "16.4"
       - node/install-packages
+      - run:
+          name: Start Appium Server
+          command: npx appium
+          background: true
+      - run:
+          name: Run tests
+          command: npm run ios.app
 
 workflows:
   appium_test:
