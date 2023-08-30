@@ -21,7 +21,9 @@ jobs:
           background: true
       - run:
           name: Run tests
-          command: npm run ios.app
+          command: |
+            sleep 10
+            npm run ios.app
 
 workflows:
   appium_test:
