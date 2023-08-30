@@ -12,8 +12,8 @@ jobs:
     steps:
       - checkout
       - macos/preboot-simulator:
-          device: iPhone 14
-          version: "16.4"
+          device: iPhone 13
+          version: "15.5"
       - node/install-packages
       - run:
           name: Start Appium Server
