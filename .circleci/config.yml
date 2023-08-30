@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.1.0
+  macos: circleci/macos@2.3.4
+
+jobs:
+  ios_test:
+    macos:
+      xcode: 14.3.1
+    resource_class: macos.m1.large.gen1
+    steps:
+      - checkout
+      - macos/preboot-simulator:
+          device: iPhone 13
+          version: "15.4"
+      - node/install-packages
+
+workflows:
+  appium_test:
+    jobs:
+      - ios_test
