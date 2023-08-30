@@ -12,8 +12,8 @@ jobs:
     steps:
       - checkout
       - macos/preboot-simulator:
-          device: "iPhone 13"
-          version: "15.4"
+          device: iPhone 14
+          version: "16.4"
       - node/install-packages
 
 workflows:
