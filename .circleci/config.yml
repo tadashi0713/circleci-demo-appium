@@ -19,7 +19,7 @@ jobs:
       - node/install-packages
       - run:
           name: Start Appium Server
-          command: npx appium --relaxed-security
+          command: npx appium --allow-insecure
           background: true
       - run:
           name: Run tests
