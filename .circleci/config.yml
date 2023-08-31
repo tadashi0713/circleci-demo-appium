@@ -19,7 +19,7 @@ jobs:
       - node/install-packages
       - run:
           name: Start Appium Server
-          command: npx appium --allow-insecure=adb_shell
+          command: npx appium --relaxed-security
           background: true
       - run:
           name: Run tests
