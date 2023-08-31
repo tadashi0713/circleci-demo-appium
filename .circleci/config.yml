@@ -12,8 +12,7 @@ jobs:
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
-      - macos/enable-vnc:
-          password: tadashi
+      - macos/enable-vnc
       - macos/add-uitest-permissions
       - macos/preboot-simulator:
           device: iPhone 13
