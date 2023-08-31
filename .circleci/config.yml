@@ -12,15 +12,10 @@ jobs:
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
-      - macos/add-uitest-permissions
       - macos/preboot-simulator:
           device: iPhone 13
           version: "15.5"
       - node/install-packages
-      - run:
-          name: Start Appium Server
-          command: npx appium --allow-insecure
-          background: true
       - run:
           name: Run tests
           command: npm run ios.app
