@@ -35,6 +35,7 @@ jobs:
           avd-name: test
           install: true
           system-image: "system-images;android-29;default;x86"
+      - android/post-emulator-launch-assemble-command: ""
       - android/start-emulator:
           avd-name: test
           post-emulator-wait-steps:
