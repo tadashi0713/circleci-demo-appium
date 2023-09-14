@@ -19,6 +19,7 @@ jobs:
       - run:
           name: Run tests
           command: npm run ios.app
+      - run: ls
 
   android_test:
     executor:
@@ -39,6 +40,7 @@ jobs:
       - run:
           name: Run tests
           command: npm run android.app
+      - run: ls
 
 workflows:
   appium_test:
